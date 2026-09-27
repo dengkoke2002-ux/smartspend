@@ -1,0 +1,104 @@
+description,category
+Swiggy order dinner,Food
+Zomato lunch order,Food
+Dominos pizza delivery,Food
+McDonald's meal,Food
+KFC chicken bucket,Food
+Starbucks coffee,Food
+cafe coffee day,Food
+restaurant dinner bill,Food
+Burger King order,Food
+Subway sandwich,Food
+grocery store bill,Food
+BigBasket grocery order,Food
+Blinkit grocery delivery,Food
+vegetable market purchase,Food
+milk and bread,Food
+food court lunch,Food
+tea stall payment,Food
+dhaba dinner,Food
+bakery purchase,Food
+ice cream parlour,Food
+Uber ride to airport,Travel
+Ola cab booking,Travel
+IRCTC train ticket,Travel
+flight ticket booking,Travel
+Indigo airlines ticket,Travel
+bus ticket booking,Travel
+petrol pump fuel,Travel
+diesel fuel refill,Travel
+toll payment,Travel
+metro card recharge,Travel
+auto rickshaw fare,Travel
+taxi fare payment,Travel
+railway ticket booking,Travel
+airport parking fee,Travel
+car rental payment,Travel
+Rapido bike ride,Travel
+highway toll fastag,Travel
+travel agency booking,Travel
+hotel booking for trip,Travel
+visa fee payment,Travel
+Rent payment,Rent
+monthly house rent,Rent
+landlord rent transfer,Rent
+apartment rent payment,Rent
+flat rent due,Rent
+PG accommodation rent,Rent
+hostel fee payment,Rent
+society maintenance charge,Rent
+house owner payment,Rent
+rental deposit,Rent
+Netflix subscription,Subscriptions
+Spotify premium payment,Subscriptions
+Amazon Prime membership,Subscriptions
+Hotstar subscription,Subscriptions
+YouTube premium,Subscriptions
+gym membership fee,Subscriptions
+Adobe Creative Cloud,Subscriptions
+iCloud storage payment,Subscriptions
+newspaper subscription,Subscriptions
+magazine subscription,Subscriptions
+mobile recharge plan,Subscriptions
+DTH recharge,Subscriptions
+broadband internet bill,Subscriptions
+Apple Music subscription,Subscriptions
+Disney Plus subscription,Subscriptions
+Amazon shopping order,Shopping
+Flipkart purchase,Shopping
+Myntra clothing order,Shopping
+Ajio fashion order,Shopping
+Nykaa cosmetics order,Shopping
+electronics store purchase,Shopping
+mobile phone purchase,Shopping
+laptop accessory order,Shopping
+shoe store purchase,Shopping
+clothing store bill,Shopping
+furniture purchase,Shopping
+home decor order,Shopping
+book store purchase,Shopping
+online shopping order,Shopping
+mall shopping bill,Shopping
+watch purchase,Shopping
+jewellery store bill,Shopping
+gift purchase,Shopping
+electricity bill payment,Other
+water bill payment,Other
+gas cylinder booking,Other
+insurance premium payment,Other
+medical store purchase,Other
+doctor consultation fee,Other
+hospital bill payment,Other
+pharmacy purchase,Other
+salary credit,Other
+ATM cash withdrawal,Other
+bank charges,Other
+loan EMI payment,Other
+credit card payment,Other
+college fee payment,Other
+tuition fee payment,Other
+donation payment,Other
+miscellaneous expense,Other
+cash transfer to friend,Other
+repair and maintenance,Other
+haircut salon payment,Other
