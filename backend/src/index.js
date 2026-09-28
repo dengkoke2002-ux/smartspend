@@ -1,6 +1,8 @@
+```javascript
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+
 import authRoutes from "./routes/auth.js";
 import transactionRoutes from "./routes/transactions.js";
 import uploadRoutes from "./routes/upload.js";
@@ -15,12 +17,21 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ===============================
+// SmartSpend API Routes
+// ===============================
+
 app.use("/api/auth", authRoutes);
 app.use("/api/transactions", transactionRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/budgets", budgetRoutes);
 app.use("/api/goals", goalRoutes);
 app.use("/api/alerts", alertRoutes);
+
+
+// ===============================
+// Backend Health Check
+// ===============================
 
 app.get("/health", (req, res) => {
   res.json({
@@ -29,7 +40,11 @@ app.get("/health", (req, res) => {
   });
 });
 
-// Test connection to SmartSpend ML service
+
+// ===============================
+// ML Service Health Check
+// ===============================
+
 app.get("/api/ml/health", async (req, res) => {
   try {
     const response = await fetch(
@@ -38,8 +53,14 @@ app.get("/api/ml/health", async (req, res) => {
 
     const data = await response.json();
 
-    res.json(data);
+    res.status(response.status).json({
+      status: "ok",
+      ml_service: data
+    });
+
   } catch (error) {
+    console.error("ML health check error:", error);
+
     res.status(503).json({
       status: "error",
       message: "ML service is unavailable",
@@ -48,7 +69,11 @@ app.get("/api/ml/health", async (req, res) => {
   }
 });
 
-// Send expense description to ML service
+
+// ===============================
+// ML Prediction
+// ===============================
+
 app.post("/api/ml/predict", async (req, res) => {
   try {
     const { description } = req.body;
@@ -67,7 +92,7 @@ app.post("/api/ml/predict", async (req, res) => {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          description
+          description: description
         })
       }
     );
@@ -75,7 +100,10 @@ app.post("/api/ml/predict", async (req, res) => {
     const data = await response.json();
 
     res.status(response.status).json(data);
+
   } catch (error) {
+    console.error("ML prediction error:", error);
+
     res.status(500).json({
       error: "Could not connect to ML service",
       details: error.message
@@ -83,8 +111,16 @@ app.post("/api/ml/predict", async (req, res) => {
   }
 });
 
+
+// ===============================
+// Start Server
+// ===============================
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-  console.log(`SmartSpend backend running on port ${port}`);
+  console.log(
+    `SmartSpend Backend running on port ${port}`
+  );
 });
+```
