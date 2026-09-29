@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const BASE = "https://smartspend-oydm.onrender.com/api";
+
 export default function UploadCsv({ onImported }) {
   const [file, setFile] = useState(null);
   const [status, setStatus] = useState("");
@@ -14,7 +16,7 @@ export default function UploadCsv({ onImported }) {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("/api/upload/csv", {
+      const res = await fetch(`${BASE}/upload/csv`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
